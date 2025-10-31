@@ -4,6 +4,9 @@ import Header from './header';
 import { Check2, X } from 'react-bootstrap-icons';
 import Axios from 'axios';
 
+// The Guardian API provides these pillarName categories: News, Opinion, Sport, Culture, Lifestyle
+const categories = ['Sport', 'Lifestyle', 'Culture', 'Opinion'];
+
 function Home() {
   document.title = 'VALIDATA News Guardian | Home';
   let stage = 1;
@@ -11,9 +14,6 @@ function Home() {
   const [liveNewsData, setLiveNewsData] = useState([]);
   const [mustSeeNews, setMustSeeNews] = useState([]);
   const [allNews, setAllNews] = useState([]);
-
-  // The Guardian API provides these pillarName categories: News, Opinion, Sport, Culture, Lifestyle
-  const categories = ['Sport', 'Lifestyle', 'Culture', 'Opinion'];
 
   // Function to fetch live news data
   const fetchLiveNewsData = useCallback(() => {
@@ -58,7 +58,7 @@ function Home() {
       .catch((error) => {
         console.error('Error', error);
       });    
-  }, [categories]);
+  }, []);
 
   // Fetch initial live news data on component mount
   useEffect(() => {
