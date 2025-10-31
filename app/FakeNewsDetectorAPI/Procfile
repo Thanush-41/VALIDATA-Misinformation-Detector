@@ -1,0 +1,1 @@
+web: gunicorn FakeNewsDetectorAPI.wsgi:application --log-file -
