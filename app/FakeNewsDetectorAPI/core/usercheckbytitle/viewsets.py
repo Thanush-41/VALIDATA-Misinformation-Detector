@@ -2,7 +2,7 @@ from rest_framework import viewsets
 from rest_framework.response import Response
 from .serializers import UserCheckSerializer
 from core.model import load_models
-from core.llm import query_ollama
+from core.llm import query_llm
 
 class UserCheckViewSet(viewsets.ViewSet):
     """Viewset to handle user checking other news."""
@@ -28,7 +28,7 @@ class UserCheckViewSet(viewsets.ViewSet):
             analysis_text = None
             analysis_error = None
             if input_text.strip():
-                success, message = query_ollama(prompt)
+                success, message = query_llm(prompt)
                 if success:
                     analysis_text = message
                 else:

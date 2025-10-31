@@ -158,10 +158,27 @@ CORS_ALLOW_METHODS = [
 ]
 
 
+# LLM Configuration
+# Choose provider: 'ollama', 'openai', 'anthropic', 'huggingface', or 'none'
+LLM_PROVIDER = os.getenv('LLM_PROVIDER', 'ollama').lower()
+
+# Ollama Configuration (for self-hosted or local Ollama)
 OLLAMA_BASE_URL = os.getenv('OLLAMA_BASE_URL', 'http://127.0.0.1:11434')
 OLLAMA_MODEL = os.getenv('OLLAMA_MODEL', 'llama3')
 try:
     OLLAMA_TIMEOUT = float(os.getenv('OLLAMA_TIMEOUT', '60'))
 except ValueError:
     OLLAMA_TIMEOUT = 60.0
+
+# OpenAI Configuration
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY', '')
+OPENAI_MODEL = os.getenv('OPENAI_MODEL', 'gpt-3.5-turbo')
+
+# Anthropic Configuration
+ANTHROPIC_API_KEY = os.getenv('ANTHROPIC_API_KEY', '')
+ANTHROPIC_MODEL = os.getenv('ANTHROPIC_MODEL', 'claude-3-haiku-20240307')
+
+# Hugging Face Configuration
+HUGGINGFACE_API_KEY = os.getenv('HUGGINGFACE_API_KEY', '')
+HUGGINGFACE_MODEL = os.getenv('HUGGINGFACE_MODEL', 'mistralai/Mistral-7B-Instruct-v0.2')
 
