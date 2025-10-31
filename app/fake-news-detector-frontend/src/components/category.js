@@ -50,7 +50,7 @@ const CategoryContainer = () => {
     console.log('Category:', category);
     fetchNewsData();
     
-  }, [category]);
+  }, [category, fetchNewsData]);
 
   
 
@@ -72,7 +72,7 @@ const CategoryContainer = () => {
                   null :
                     (
                       <Col>
-                        <img src={newsData[0].img_url}/>
+                        <img src={newsData[0].img_url} alt={newsData[0].title}/>
                       </Col>
                     )
                   }
@@ -100,7 +100,7 @@ const CategoryContainer = () => {
                 <div className='div-ipsdf'>
                   { newsData[1].img_url === 'None' ? null : (
                   <Row>
-                    <img src={newsData[1].img_url} width={500} height={200}></img>
+                    <img src={newsData[1].img_url} width={500} height={200} alt={newsData[1].title}></img>
                     </Row>
                   ) }
                   <Row>
@@ -134,7 +134,7 @@ const CategoryContainer = () => {
                 <div className='div-olapq'>
                   {news.img_url !== 'None' && (
                     <Row>
-                      <img src={news.img_url} width={300} height={150} alt={`News ${index} Image`} />
+                      <img src={news.img_url} width={300} height={150} alt={news.title} />
                     </Row>
                   )}
                   <Row>
@@ -169,7 +169,7 @@ const CategoryContainer = () => {
                 <div className="div-olapq">
                   {news.img_url !== 'None' && (
                     <Row>
-                      <img src={news.img_url} width={300} height={150} alt={`News ${index + 6} Image`} />
+                      <img src={news.img_url} width={300} height={150} alt={news.title} />
                     </Row>
                   )}
                   <Row>

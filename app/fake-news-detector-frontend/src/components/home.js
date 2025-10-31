@@ -70,10 +70,7 @@ function Home() {
     }, 10000);
 
     return () => clearInterval(intervalId);
-  }, []);
-
-  let newsData = [];
-  newsData = liveNewsData;
+  }, [fetchLiveNewsData]);
 
   return (
     <>
@@ -95,7 +92,7 @@ function Home() {
                       null :
                         (
                           <Col>
-                            <img src={liveNewsData[0].img_url}/>
+                            <img src={liveNewsData[0].img_url} alt={liveNewsData[0].title}/>
                           </Col>
                         )
                     }
@@ -125,7 +122,7 @@ function Home() {
                   <div className='div-ipsdf'>
                     { liveNewsData[1].img_url === 'None' ? null : (
                       <Row>
-                        <img src={liveNewsData[1].img_url} width={500} height={200}></img>
+                        <img src={liveNewsData[1].img_url} width={500} height={200} alt={liveNewsData[1].title}></img>
                         </Row>
                     ) }
                     <Row>
@@ -158,7 +155,7 @@ function Home() {
                   <div className="div-olapq">
                     {news.img_url !== 'None' && (
                       <Row>
-                        <img src={news.img_url} width={300} height={150} alt={`News ${index + 2} Image`} />
+                        <img src={news.img_url} width={300} height={150} alt={news.title} />
                       </Row>
                     )}
                     <Row>
@@ -193,7 +190,7 @@ function Home() {
                   <div className="div-olapq">
                     {news.img_url !== 'None' && (
                       <Row>
-                        <img src={news.img_url} width={300} height={150} alt={`News ${index + 6} Image`} />
+                        <img src={news.img_url} width={300} height={150} alt={news.title} />
                       </Row>
                     )}
                     <Row>
@@ -240,7 +237,7 @@ function Home() {
                     <div className="div-olapq">
                       {news.img_url !== "None" ? (
                         <Row>
-                          <img src={news.img_url} width={300} height={150} alt={`Must-See News ${index} Image`} />
+                          <img src={news.img_url} width={300} height={150} alt={news.title} />
                         </Row>
                       ) : null}
                       <Row>
@@ -290,7 +287,7 @@ function Home() {
                             src={news.img_url}
                             width={300}
                             height={150}
-                            alt={`All News ${index} Image`}
+                            alt={news.title}
                           />
                         </Row>
                       ) : null}
