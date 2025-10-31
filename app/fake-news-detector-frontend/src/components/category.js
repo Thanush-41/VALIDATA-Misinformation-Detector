@@ -21,7 +21,7 @@ const CategoryContainer = () => {
     // Use the category as-is from the URL (no need to capitalize)
     const categoryParam = category;
 
-    Axios.get('http://127.0.0.1:8000/api/category/' + categoryParam + '/')
+    Axios.get('https://validata-misinformation-detector.onrender.com/api/category/' + categoryParam + '/')
       .then((response) => {
 
         console.log('API response:', response);

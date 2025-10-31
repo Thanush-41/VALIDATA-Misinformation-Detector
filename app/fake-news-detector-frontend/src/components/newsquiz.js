@@ -23,7 +23,7 @@ function NewsQuiz() {
   }, []); // Fetch initial quiz data on component mount
 
   const fetchQuizData = () => {
-    Axios.get('http://127.0.0.1:8000/api/quiz/')
+    Axios.get('https://validata-misinformation-detector.onrender.com/api/quiz/')
       .then((response) => {
         setNewsForQuiz(response.data);
       })

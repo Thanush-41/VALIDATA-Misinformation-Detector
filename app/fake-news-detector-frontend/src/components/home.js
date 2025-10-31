@@ -17,7 +17,7 @@ function Home() {
 
   // Function to fetch live news data
   const fetchLiveNewsData = useCallback(() => {
-    Axios.get('http://127.0.0.1:8000/api/live/')
+    Axios.get('https://validata-misinformation-detector.onrender.com/api/live/')
       .then((response) => {
         setLiveNewsData(response.data);
         console.log(response.data);
@@ -26,7 +26,7 @@ function Home() {
         console.error('Error', error);
       });
     
-    Axios.get('http://127.0.0.1:8000/api/category/News/')
+    Axios.get('https://validata-misinformation-detector.onrender.com/api/category/News/')
     .then((response) => {
       setMustSeeNews(response.data);
       console.log(response.data);
@@ -36,7 +36,7 @@ function Home() {
     });
 
     const fetchPromises = categories.map((category) => {
-      return Axios.get(`http://127.0.0.1:8000/api/category/${category}/`)
+      return Axios.get(`https://validata-misinformation-detector.onrender.com/api/category/${category}/`)
         .then((response) => {
           if (response.data.length > 0) {
             return response.data[0]; // Return the news data

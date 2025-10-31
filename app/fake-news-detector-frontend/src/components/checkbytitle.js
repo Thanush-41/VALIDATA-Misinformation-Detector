@@ -26,7 +26,7 @@ function CheckByTitle() {
       user_news: inputNewsTitle,
     };
 
-    Axios.post('http://127.0.0.1:8000/api/usercheck/title/', dataToSend)
+    Axios.post('https://validata-misinformation-detector.onrender.com/api/usercheck/title/', dataToSend)
       .then((response) => {
         const { prediction, analysis: analysisText, analysis_error: analysisErrorMessage } = response.data;
 
