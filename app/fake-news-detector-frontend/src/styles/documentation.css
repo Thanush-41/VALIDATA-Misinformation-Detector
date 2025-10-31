@@ -1,0 +1,213 @@
+/* Documentation Page Styles */
+
+.documentation-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.doc-title {
+    text-align: center;
+    color: var(--text-secondary);
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.doc-card {
+    margin-bottom: 30px;
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-light) 0px 2px 8px 0px;
+}
+
+.doc-card:hover {
+    box-shadow: var(--shadow-medium) 0px 4px 12px 0px;
+}
+
+.doc-card .card-body {
+    padding: 30px;
+    color: var(--text-primary);
+}
+
+.doc-section-title {
+    color: var(--text-secondary);
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 1.75rem;
+    border-bottom: 3px solid var(--text-accent);
+    padding-bottom: 10px;
+}
+
+.doc-subsection-title {
+    color: var(--text-secondary);
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+.doc-text {
+    color: var(--text-primary);
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.tech-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.tech-list li {
+    margin-bottom: 10px;
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+.tech-list .badge {
+    margin-right: 10px;
+    font-size: 0.85rem;
+    padding: 6px 12px;
+}
+
+.architecture-section {
+    margin-top: 15px;
+}
+
+.architecture-section ol {
+    padding-left: 20px;
+    color: var(--text-primary);
+}
+
+.architecture-section ol li {
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+.metrics-table {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+.metrics-table thead {
+    background-color: var(--text-accent);
+    color: white;
+}
+
+.metrics-table th,
+.metrics-table td {
+    border-color: var(--border-color);
+    padding: 12px;
+}
+
+.metrics-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.metrics-table tbody tr:hover {
+    background-color: var(--bg-secondary);
+}
+
+.info-box {
+    background-color: var(--bg-secondary);
+    border-left: 4px solid var(--text-accent);
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.code-block {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px 0;
+    overflow-x: auto;
+}
+
+.code-block pre {
+    margin: 0;
+    color: var(--text-primary);
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.code-block code {
+    background-color: var(--bg-primary);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    color: var(--text-accent);
+}
+
+.config-table {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+.config-table thead {
+    background-color: var(--text-secondary);
+    color: white;
+}
+
+.config-table th,
+.config-table td {
+    border-color: var(--border-color);
+    padding: 12px;
+}
+
+.config-table code {
+    background-color: var(--bg-primary);
+    padding: 2px 6px;
+    border-radius: 3px;
+    color: var(--text-accent);
+    font-weight: 600;
+}
+
+.feature-box {
+    background-color: var(--bg-secondary);
+    padding: 20px;
+    border-radius: 10px;
+    height: 100%;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium) 0px 6px 16px 0px;
+}
+
+.feature-box h5 {
+    color: var(--text-secondary);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.feature-box p {
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .doc-title {
+        font-size: 2rem;
+    }
+    
+    .doc-section-title {
+        font-size: 1.5rem;
+    }
+    
+    .doc-card .card-body {
+        padding: 20px;
+    }
+    
+    .feature-box {
+        margin-bottom: 15px;
+    }
+}
