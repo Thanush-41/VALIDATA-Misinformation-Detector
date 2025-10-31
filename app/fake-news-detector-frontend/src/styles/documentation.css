@@ -1,4 +1,4 @@
-/* Documentation Page Styles */
+/* Glassmorphism Documentation Page Styles */
 
 .documentation-container {
     margin-top: 40px;
@@ -7,31 +7,37 @@
 
 .doc-title {
     text-align: center;
-    color: var(--text-secondary);
-    font-weight: 700;
-    margin-bottom: 30px;
-    font-size: 2.5rem;
+    color: var(--text-primary);
+    font-weight: 800;
+    margin-bottom: 40px;
+    font-size: 3rem;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .doc-card {
     margin-bottom: 30px;
-    background-color: var(--bg-tertiary);
-    border: 1px solid var(--border-color);
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 20px !important;
     transition: all 0.3s ease;
-    box-shadow: var(--shadow-light) 0px 2px 8px 0px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15) !important;
 }
 
 .doc-card:hover {
-    box-shadow: var(--shadow-medium) 0px 4px 12px 0px;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px 0 rgba(31, 38, 135, 0.25) !important;
 }
 
 .doc-card .card-body {
     padding: 30px;
     color: var(--text-primary);
+    background: transparent !important;
 }
 
 .doc-section-title {
-    color: var(--text-secondary);
+    color: var(--text-accent);
     font-weight: 700;
     margin-bottom: 20px;
     font-size: 1.75rem;

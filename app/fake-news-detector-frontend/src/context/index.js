@@ -7,7 +7,7 @@ class MyProvider extends Component {
 
     state = {
         stage: 1,
-        theme: localStorage.getItem('theme') || 'light'
+        theme: localStorage.getItem('theme') || 'dark'
     }
 
     componentDidMount() {
