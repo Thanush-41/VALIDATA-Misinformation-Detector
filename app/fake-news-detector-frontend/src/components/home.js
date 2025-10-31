@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Header from './header';
 import { Check2, X } from 'react-bootstrap-icons';
@@ -16,7 +16,7 @@ function Home() {
   const categories = ['Sport', 'Lifestyle', 'Culture', 'Opinion'];
 
   // Function to fetch live news data
-  const fetchLiveNewsData = () => {
+  const fetchLiveNewsData = useCallback(() => {
     Axios.get('http://127.0.0.1:8000/api/live/')
       .then((response) => {
         setLiveNewsData(response.data);
@@ -58,7 +58,7 @@ function Home() {
       .catch((error) => {
         console.error('Error', error);
       });    
-  };
+  }, [categories]);
 
   // Fetch initial live news data on component mount
   useEffect(() => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Check2, X } from 'react-bootstrap-icons';
 import { ToastContainer, toast } from 'react-toastify';
@@ -16,7 +16,7 @@ const CategoryContainer = () => {
 
   const [newsData, setNewsData] = useState([]);
 
-  const fetchNewsData = () => {
+  const fetchNewsData = useCallback(() => {
 
     // Use the category as-is from the URL (no need to capitalize)
     const categoryParam = category;
@@ -44,7 +44,7 @@ const CategoryContainer = () => {
       }
     );
 
-  }
+  }, [category]);
   
   useEffect(() => {
     console.log('Category:', category);
