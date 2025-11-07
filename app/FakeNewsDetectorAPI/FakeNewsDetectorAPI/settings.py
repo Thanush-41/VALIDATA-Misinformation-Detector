@@ -11,9 +11,15 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+from dotenv import load_dotenv
+from pathlib import Path
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Load environment variables from .env file in the BASE_DIR
+env_path = os.path.join(BASE_DIR, '.env')
+load_dotenv(dotenv_path=env_path)
 
 
 # Quick-start development settings - unsuitable for production
@@ -182,3 +188,10 @@ ANTHROPIC_MODEL = os.getenv('ANTHROPIC_MODEL', 'claude-3-haiku-20240307')
 HUGGINGFACE_API_KEY = os.getenv('HUGGINGFACE_API_KEY', '')
 HUGGINGFACE_MODEL = os.getenv('HUGGINGFACE_MODEL', 'mistralai/Mistral-7B-Instruct-v0.2')
 
+# Google Gemini Configuration
+GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY', '')
+GOOGLE_MODEL = os.getenv('GOOGLE_MODEL', 'gemini-2.5-flash')
+try:
+    GOOGLE_TIMEOUT = float(os.getenv('GOOGLE_TIMEOUT', '60'))
+except ValueError:
+    GOOGLE_TIMEOUT = 60.0

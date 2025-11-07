@@ -134,6 +134,30 @@ def query_huggingface(prompt: str) -> Tuple[bool, str]:
         return False, f'Hugging Face request failed: {exc}'
 
 
+def query_google(prompt: str) -> Tuple[bool, str]:
+    """Send a prompt to Google Gemini and return a tuple(success flag, message)."""
+    try:
+        import google.generativeai as genai
+    except ImportError:
+        return False, "google-generativeai package not installed. Run: pip install google-generativeai"
+    
+    api_key = getattr(settings, 'GOOGLE_API_KEY', None)
+    if not api_key:
+        return False, "GOOGLE_API_KEY not configured in settings"
+    
+    model_name = getattr(settings, 'GOOGLE_MODEL', 'gemini-pro')
+    
+    try:
+        genai.configure(api_key=api_key)
+        # Use the correct model name - try gemini-1.5-flash-latest or gemini-pro
+        model = genai.GenerativeModel('gemini-2.5-flash')
+        response = model.generate_content(prompt)
+        return True, response.text.strip()
+    except Exception as exc:
+        logger.exception('Failed to query Google Gemini.')
+        return False, f'Google Gemini request failed: {exc}'
+
+
 def query_llm(prompt: str, provider: Optional[str] = None) -> Tuple[bool, str]:
     """
     Universal LLM query function that routes to the configured provider.
@@ -156,6 +180,8 @@ def query_llm(prompt: str, provider: Optional[str] = None) -> Tuple[bool, str]:
         return query_openai(prompt)
     elif provider == 'anthropic':
         return query_anthropic(prompt)
+    elif provider == 'google':
+        return query_google(prompt)
     elif provider == 'huggingface':
         return query_huggingface(prompt)
     elif provider == 'none':

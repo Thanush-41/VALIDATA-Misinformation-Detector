@@ -9,10 +9,15 @@
 # Uncomment to use Anthropic Claude:
 # anthropic>=0.7.0
 
+# Google Gemini
+# Uncomment to use Google Gemini:
+google-generativeai>=0.3.0
+
 # Note: Hugging Face Inference API uses requests (already in requirements.txt)
 # Note: Ollama uses requests (already in requirements.txt)
 
 # Installation examples:
 # For OpenAI: pip install openai
 # For Anthropic: pip install anthropic
-# For both: pip install openai anthropic
+# For Google Gemini: pip install google-generativeai
+# For both: pip install openai anthropic google-generativeai
