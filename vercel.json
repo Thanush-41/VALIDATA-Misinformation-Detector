@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "buildCommand": "cd app/fake-news-detector-frontend && npm install && npm run build",
+  "outputDirectory": "app/fake-news-detector-frontend/build",
+  "devCommand": "cd app/fake-news-detector-frontend && npm start",
+  "installCommand": "cd app/fake-news-detector-frontend && npm install",
+  "framework": null,
+  "public": false
+}
