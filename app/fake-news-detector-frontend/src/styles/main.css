@@ -1,8 +1,8 @@
 * {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Inter', 'PT Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
-/* Glassmorphism Base Styles */
+/* Modern Professional Gradient Backgrounds */
 body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     background-attachment: fixed;
@@ -10,93 +10,109 @@ body {
 }
 
 [data-theme='dark'] body {
-    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #2d1b4e 100%);
     background-attachment: fixed;
 }
 
 [data-theme='blue'] body {
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1e40af 100%);
     background-attachment: fixed;
 }
 
 [data-theme='purple'] body {
-    background: linear-gradient(135deg, #5b21b6 0%, #7c3aed 50%, #a855f7 100%);
+    background: linear-gradient(135deg, #1e1b4b 0%, #4c1d95 50%, #6b21a8 100%);
     background-attachment: fixed;
 }
 
 :root {
-    --bg-primary: rgba(255, 255, 255, 0.7);
-    --bg-secondary: rgba(248, 251, 255, 0.6);
-    --bg-tertiary: rgba(255, 255, 255, 0.5);
-    --text-primary: #1a202c;
-    --text-secondary: #135996;
-    --text-accent: #48a2f8;
-    --border-color: rgba(255, 255, 255, 0.3);
-    --shadow-light: rgba(0, 0, 0, 0.1);
-    --shadow-medium: rgba(99, 99, 99, 0.2);
-    --error-bg: rgba(255, 246, 246, 0.8);
-    --error-text: #a94442;
-    --success-color: #135996;
-    --glass-bg: rgba(255, 255, 255, 0.25);
-    --glass-border: rgba(255, 255, 255, 0.18);
+    /* Modern Light Theme - Clean & Professional */
+    --bg-primary: rgba(255, 255, 255, 0.85);
+    --bg-secondary: rgba(248, 250, 252, 0.75);
+    --bg-tertiary: rgba(241, 245, 249, 0.65);
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-accent: #3b82f6;
+    --border-color: rgba(203, 213, 225, 0.4);
+    --shadow-light: rgba(15, 23, 42, 0.08);
+    --shadow-medium: rgba(15, 23, 42, 0.15);
+    --error-bg: rgba(254, 242, 242, 0.9);
+    --error-text: #dc2626;
+    --success-color: #10b981;
+    --glass-bg: rgba(255, 255, 255, 0.35);
+    --glass-border: rgba(255, 255, 255, 0.25);
+    --accent-primary: #3b82f6;
+    --accent-secondary: #8b5cf6;
+    --card-hover: rgba(255, 255, 255, 0.45);
 }
 
 [data-theme='dark'] {
-    --bg-primary: rgba(26, 26, 26, 0.7);
-    --bg-secondary: rgba(45, 45, 45, 0.6);
-    --bg-tertiary: rgba(36, 36, 36, 0.5);
-    --text-primary: #e0e0e0;
-    --text-secondary: #64b5f6;
-    --text-accent: #90caf9;
-    --border-color: rgba(255, 255, 255, 0.1);
+    /* Modern Dark Theme - Sleek & Eye-friendly */
+    --bg-primary: rgba(15, 23, 42, 0.85);
+    --bg-secondary: rgba(30, 41, 59, 0.75);
+    --bg-tertiary: rgba(51, 65, 85, 0.65);
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-accent: #60a5fa;
+    --border-color: rgba(71, 85, 105, 0.4);
     --shadow-light: rgba(0, 0, 0, 0.3);
     --shadow-medium: rgba(0, 0, 0, 0.5);
-    --error-bg: rgba(61, 38, 38, 0.8);
-    --error-text: #ff8a80;
-    --success-color: #64b5f6;
-    --glass-bg: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(255, 255, 255, 0.1);
+    --error-bg: rgba(69, 26, 26, 0.85);
+    --error-text: #fca5a5;
+    --success-color: #34d399;
+    --glass-bg: rgba(30, 41, 59, 0.15);
+    --glass-border: rgba(148, 163, 184, 0.15);
+    --accent-primary: #60a5fa;
+    --accent-secondary: #a78bfa;
+    --card-hover: rgba(51, 65, 85, 0.25);
 }
 
 [data-theme='blue'] {
-    --bg-primary: rgba(13, 27, 42, 0.7);
-    --bg-secondary: rgba(27, 38, 59, 0.6);
-    --bg-tertiary: rgba(21, 34, 56, 0.5);
-    --text-primary: #e0e1dd;
-    --text-secondary: #00d4ff;
-    --text-accent: #00b4d8;
-    --border-color: rgba(0, 180, 216, 0.2);
-    --shadow-light: rgba(0, 0, 0, 0.4);
-    --shadow-medium: rgba(0, 0, 0, 0.6);
-    --error-bg: rgba(45, 31, 47, 0.8);
-    --error-text: #ff6b9d;
-    --success-color: #00d4ff;
-    --glass-bg: rgba(0, 212, 255, 0.1);
-    --glass-border: rgba(0, 212, 255, 0.2);
+    /* Modern Blue Theme - Professional & Trust */
+    --bg-primary: rgba(15, 23, 42, 0.85);
+    --bg-secondary: rgba(30, 58, 138, 0.75);
+    --bg-tertiary: rgba(30, 64, 175, 0.65);
+    --text-primary: #f0f9ff;
+    --text-secondary: #bae6fd;
+    --text-accent: #38bdf8;
+    --border-color: rgba(56, 189, 248, 0.25);
+    --shadow-light: rgba(0, 0, 0, 0.35);
+    --shadow-medium: rgba(0, 0, 0, 0.55);
+    --error-bg: rgba(55, 32, 70, 0.85);
+    --error-text: #f9a8d4;
+    --success-color: #22d3ee;
+    --glass-bg: rgba(56, 189, 248, 0.12);
+    --glass-border: rgba(56, 189, 248, 0.22);
+    --accent-primary: #38bdf8;
+    --accent-secondary: #0ea5e9;
+    --card-hover: rgba(30, 64, 175, 0.35);
 }
 
 [data-theme='purple'] {
-    --bg-primary: rgba(26, 9, 51, 0.7);
-    --bg-secondary: rgba(45, 27, 78, 0.6);
-    --bg-tertiary: rgba(35, 20, 58, 0.5);
-    --text-primary: #e6d9f5;
-    --text-secondary: #b794f6;
-    --text-accent: #d8b4fe;
-    --border-color: rgba(183, 148, 246, 0.2);
-    --shadow-light: rgba(0, 0, 0, 0.4);
-    --shadow-medium: rgba(0, 0, 0, 0.6);
-    --error-bg: rgba(61, 31, 78, 0.8);
-    --error-text: #ff8fb4;
-    --success-color: #b794f6;
-    --glass-bg: rgba(183, 148, 246, 0.1);
-    --glass-border: rgba(183, 148, 246, 0.2);
+    /* Modern Purple Theme - Creative & Bold */
+    --bg-primary: rgba(30, 27, 75, 0.85);
+    --bg-secondary: rgba(76, 29, 149, 0.75);
+    --bg-tertiary: rgba(107, 33, 168, 0.65);
+    --text-primary: #faf5ff;
+    --text-secondary: #e9d5ff;
+    --text-accent: #c084fc;
+    --border-color: rgba(192, 132, 252, 0.25);
+    --shadow-light: rgba(0, 0, 0, 0.35);
+    --shadow-medium: rgba(0, 0, 0, 0.55);
+    --error-bg: rgba(74, 31, 88, 0.85);
+    --error-text: #fda4af;
+    --success-color: #a78bfa;
+    --glass-bg: rgba(192, 132, 252, 0.12);
+    --glass-border: rgba(192, 132, 252, 0.22);
+    --accent-primary: #c084fc;
+    --accent-secondary: #a855f7;
+    --card-hover: rgba(107, 33, 168, 0.35);
 }
 
 
 body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo-image {
@@ -505,10 +521,6 @@ body {
     
 }
 
-.h-fowjs {
-    
-}
-
 .cl-ksmao {
     text-align: center;
 }
@@ -756,35 +768,60 @@ body {
 
 
 
-/* CSS */
+/* Modern Professional Button */
 .button-16 {
-  background-color: #f8f9fa;
-  border: 1px solid #f8f9fa;
-  border-radius: 4px;
-  color: #3c4043;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  border: none;
+  border-radius: 10px;
+  color: white;
   cursor: pointer;
-  font-family: arial,sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 14px;
-  height: 36px;
-  line-height: 27px;
-  min-width: 54px;
-  padding: 0 16px;
+  font-weight: 600;
+  height: 44px;
+  line-height: 44px;
+  min-width: 100px;
+  padding: 0 24px;
   text-align: center;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   white-space: pre;
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.25);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.button-16::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s;
 }
 
 .button-16:hover {
-  border-color: #dadce0;
-  box-shadow: rgba(0, 0, 0, .1) 0 1px 1px;
-  color: #202124;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.35);
+}
+
+.button-16:hover::before {
+  transform: translateX(100%);
 }
 
 .button-16:focus {
-  border-color: #4285f4;
   outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+.button-16:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2);
 }
 
 .frm-moqpa {
