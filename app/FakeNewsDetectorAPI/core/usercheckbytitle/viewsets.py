@@ -20,9 +20,15 @@ class UserCheckViewSet(viewsets.ViewSet):
             prediction = self.nb_model.predict(vectorized_text)
             prediction_bool = True if prediction[0] == 1 else False
             prompt = (
-                f"Analyze this headline: \"{input_text.strip()}\"\n\n"
-                "In exactly 2-3 short sentences: What should be verified? How to fact-check it? "
-                "Do not use bullet points or formatting."
+                f"Analyze this news headline: \"{input_text.strip()}\"\n\n"
+                "Your task:\n"
+                "1. First, clearly state if this headline is likely REAL or FAKE.\n"
+                "2. Then provide a brief explanation (2-3 sentences) supporting your assessment.\n"
+                "3. Explain what makes it credible or suspicious.\n\n"
+                "Format your response as:\n"
+                "Verdict: [REAL/FAKE]\n"
+                "Explanation: [Your analysis here]\n\n"
+                "Be concise and direct. Do not use bullet points."
             )
 
             analysis_text = None

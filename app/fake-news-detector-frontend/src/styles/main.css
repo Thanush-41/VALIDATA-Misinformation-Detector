@@ -4,13 +4,13 @@
 
 /* Modern Professional Gradient Backgrounds */
 body {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #ffffff;
     background-attachment: fixed;
     min-height: 100vh;
 }
 
 [data-theme='dark'] body {
-    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #2d1b4e 100%);
+    background: #000000;
     background-attachment: fixed;
 }
 
@@ -26,44 +26,44 @@ body {
 
 :root {
     /* Modern Light Theme - Clean & Professional */
-    --bg-primary: rgba(255, 255, 255, 0.85);
-    --bg-secondary: rgba(248, 250, 252, 0.75);
-    --bg-tertiary: rgba(241, 245, 249, 0.65);
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-tertiary: #f1f5f9;
     --text-primary: #0f172a;
     --text-secondary: #334155;
     --text-accent: #3b82f6;
-    --border-color: rgba(203, 213, 225, 0.4);
+    --border-color: rgba(203, 213, 225, 0.5);
     --shadow-light: rgba(15, 23, 42, 0.08);
     --shadow-medium: rgba(15, 23, 42, 0.15);
     --error-bg: rgba(254, 242, 242, 0.9);
     --error-text: #dc2626;
     --success-color: #10b981;
-    --glass-bg: rgba(255, 255, 255, 0.35);
-    --glass-border: rgba(255, 255, 255, 0.25);
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(203, 213, 225, 0.5);
     --accent-primary: #3b82f6;
     --accent-secondary: #8b5cf6;
-    --card-hover: rgba(255, 255, 255, 0.45);
+    --card-hover: rgba(248, 250, 252, 0.9);
 }
 
 [data-theme='dark'] {
-    /* Modern Dark Theme - Sleek & Eye-friendly */
-    --bg-primary: rgba(15, 23, 42, 0.85);
-    --bg-secondary: rgba(30, 41, 59, 0.75);
-    --bg-tertiary: rgba(51, 65, 85, 0.65);
-    --text-primary: #f1f5f9;
-    --text-secondary: #cbd5e1;
+    /* Modern Dark Theme - True Black */
+    --bg-primary: #000000;
+    --bg-secondary: #0a0a0a;
+    --bg-tertiary: #1a1a1a;
+    --text-primary: #ffffff;
+    --text-secondary: #e5e5e5;
     --text-accent: #60a5fa;
-    --border-color: rgba(71, 85, 105, 0.4);
+    --border-color: rgba(255, 255, 255, 0.1);
     --shadow-light: rgba(0, 0, 0, 0.3);
     --shadow-medium: rgba(0, 0, 0, 0.5);
     --error-bg: rgba(69, 26, 26, 0.85);
     --error-text: #fca5a5;
     --success-color: #34d399;
-    --glass-bg: rgba(30, 41, 59, 0.15);
-    --glass-border: rgba(148, 163, 184, 0.15);
+    --glass-bg: rgba(0, 0, 0, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.1);
     --accent-primary: #60a5fa;
     --accent-secondary: #a78bfa;
-    --card-hover: rgba(51, 65, 85, 0.25);
+    --card-hover: rgba(26, 26, 26, 0.8);
 }
 
 [data-theme='blue'] {
